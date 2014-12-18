@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Payment Integrations</title>
+  <style>
+    ul{
+      list-style-type: none;
+    }
+    li{
+      border: thin solid #AAA;
+      background: #EEE;
+      margin: 5px;
+      padding: 5px;
+    }
+  </style>
+  <script>
+    var createAccount = function(){
+      console.log('url w params:',window.location.href);
+      console.log('just params:',window.location.search);
+      var secret_key = 'pk_test_N3VDjU8t1YCRMiCk4bQ1YCvb';
+
+      var xhr = new XMLHttpRequest;
+      xhr.open('POST', 'http://127.0.0.1:1337/', true);
+      xhr.send(window.location.href);
+    };
+  </script>
 </head>
 <body>
   <h1>Stripe:</h1>
   <ul>
-    <li><input type=checkbox unchecked>collect payments from credit card
+    <li><input type=checkbox checked disabled>collect payments from credit card
         <form action="" method="POST">
           <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -18,9 +40,19 @@
           </script>
       </form>
     </li>
-    <li><input type=checkbox unchecked>create account for a customer</li>
-    <li><input type=checkbox unchecked>collect payments for a customer</li>
-    <li><input type=checkbox unchecked>disburse customer's payments to their bank account</li>
+    <li><input type=checkbox unchecked disabled>create account for a customer
+      <form action="javascript:createAccount();">
+        <input type="text" name="firstname" placeholder="first name">
+        <input type="text" name="lastname" placeholder="last name">
+        <input type="email" name="email" placeholder="email">
+        <label>Date of Birth</label><input type="date" name="dob">
+        <input type="submit" value="Create account">
+      </form>
+    </li>
+    <li><input type=checkbox unchecked disabled>collect payments for a customer
+    </li>
+    <li><input type=checkbox unchecked disabled>disburse customer's payments to their bank account
+    </li>
   </ul>
 </body>
 </html>
