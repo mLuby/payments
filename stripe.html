@@ -19,9 +19,11 @@
       console.log('just params:',window.location.search);
       var secret_key = 'pk_test_N3VDjU8t1YCRMiCk4bQ1YCvb';
 
-      var xhr = new XMLHttpRequest;
+      console.log('JSONified:','{'+window.location.search.substring(1).split('&').map(function(param){ return decodeURIComponent(param.replace('=',': ')); })+'}');
+
+      var xhr = new XMLHttpRequest();
       xhr.open('POST', 'http://127.0.0.1:1337/', true);
-      xhr.send(window.location.href);
+      xhr.send(window.location.search);
     };
   </script>
 </head>
@@ -41,7 +43,7 @@
       </form>
     </li>
     <li><input type=checkbox unchecked disabled>create account for a customer
-      <form action="javascript:createAccount();">
+      <form enctype='application/json' action="javascript:createAccount();">
         <input type="text" name="firstname" placeholder="first name">
         <input type="text" name="lastname" placeholder="last name">
         <input type="email" name="email" placeholder="email">
