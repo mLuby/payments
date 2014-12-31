@@ -1,0 +1,109 @@
+Sam wants to give Dan 100 USD, as quickly, easily*, and cheaply as possible. *minimal info, minimal signup
+
+Use cases:
+- Split a bill, with people who only have credit cards and smart phones.
+- Buy something online, with only credit card, smart phone, and laptop.
+- Transfer money internationally.
+
+Sam has:
+  - credit cards
+  - cash
+  - bank accounts
+  - debit cards
+  - checks
+  - processing power
+  - network connectivity
+  - digital storage
+  - electricity
+  - ad space
+
+Current Options:
+  - Sam gives Dan cash:
+    seconds: Sam -$100, Dan +$100.
+
+  - Dan charges Sam's credit card:
+    seconds: Sam -$103, Dan +$100, credit card company +$3.
+
+  - Dan charges Sam's debit card:
+    seconds: Sam -$101, Dan +$100, bank transaction fee? +$1.
+
+  - Sam sends Dan a cheque:
+    days: Sam -$100, Dan +$100
+
+Ideal scenario:
+  Given Dan's identification and Sam's confirmation:
+  1. Sam's account is debited Dan  (-)$100.
+  2. Dan's account is credited Dan (+)$100.
+  -  Time elapsed ≤ 1s.
+
+  JSON: {
+    source: sam_account_plus_authorization,
+    amount: 100.00,
+    currency: 'USD',
+    destination: dan_account (or response specifies newly-created account)
+  }
+
+Realistic scenarios:
+  1. Sam pays $100 to transfersRus, creating an account with 100 credits.
+  2. Sam transfers 100 credits to Dan, creating an account for Dan.
+  3. Dan takes posession of the new account with 100 credits.
+  4. Dan has transfersRus write a cheque for $100 that he cashes.
+
+  1. Sam pays $100 (how?) enter's Dan's email.
+  2. TransfersRus sends Dan an email saying 'Claim your $100 from Sam by clicking this link.'
+  3. Dan clicks the link, is prompted to take control of the account with $100.
+  4. From there, Dan can ask that a cheque be sent to him.
+
+Special Techniques:
+- float
+- bundle transactions
+
+Restrictions:
+- Know Your Customer (KYC)
+-
+
+FAQ:
+- Is it dangerous to allow anyone to send funds to an account? No.
+- Is it dangerous to allow anyone to see the contents of an account? Maybe–could be a privacy issue, could make someone targeted.
+- Is it dangerous to allow anyone to receive funds? Yes, if they're a criminal it could be illegal.
+- Do we care about verification–1 person to an account? No, all that matters is control of the account.
+
+Critical features:
+- free (no transaction fees, no conversion fees)
+- easy (1-step registration, immediate access to deposited money)
+= frictionless adoption
+Secondary features
+- private
+- anonymous
+- fast transfers
+- accurate
+- legal
+
+Trust can be based on multiple things:
+- user's past behavior: eg you can't withdraw until you've made 100 transactions.
+- possibility of user breaking trust: eg you can't send or withdraw more than your balance.
+- threat of repercussions to user: eg user will die if they break trust
+
+Frictionless adoption:
+- user has an incentive to join. "Sam just sent you a free Uber ride."
+- user has an incentive to invite others. "If I invite Dan, I get an extra 250MB."
+  incentives: acquire/hasten good stuff, reduce/delay bad stuff
+- user doesn't have to do anything to join. ""
+- user doesn't have to do anything to invite others. ""
+
+ApplePay      [3.15%, instant]
+PayPal        [3%,    instant]
+cheque        [free,  days]
+Venmo         [free,  instant]
+Wire Transfer [$30,   instant]
+ACH           [free,  days]
+
+
+Venmo (free, days):
+  from source bank account  [free, days]    to source venmo account [free, instant]
+  from source venmo account [free, instant] to dest venmo account   [free, instant]
+  from dest venmo account   [free, instant] to dest bank account    [free, instant]
+PayPal (3%, days):
+  from credit card          [3%, instant]   to bank account         [free, days]
+Bank [free, days]:
+  from source bank account  [free, days] to dest bank account       [free, days]
