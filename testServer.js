@@ -1,22 +1,30 @@
 var http = require('http');
-http.createServer(function (req, res) {
-  if (req.method === 'POST') {
+var url = require('url');
+
+var PORT = '1337';
+var IP = '127.0.0.1'
+var serverURL = 'http://'+IP+':'+PORT+'/';
+
+http.createServer(function (request, response) {
+  if (request.method === 'POST') {
     var data = '';
-    req.on('data', function(chunk) {
+    request.on('data', function(chunk) {
       data += chunk;
     });
 
-    req.on('end', function() {
-      console.log('data', data);
-      res.writeHead(200, "OK", {'Content-Type': 'text/html'});
-      res.end();
+    request.on('end', function() {
+      var url_parts = url.parse(serverURL+'?'+data, true);
+      var query = url_parts.query
+      console.log('query', query);
+      response.writeHead(200, "OK", {'Content-Type': 'text/html'});
+      response.end();
     });
   } else {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello World\n');
+    response.writeHead(200, {'Content-Type': 'text/plain'});
+    response.end('Hello World\n');
   }
-}).listen(1337, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:1337/');
+}).listen(PORT, IP);
+console.log('Server running at', serverURL);
 
 /*
 curl http://127.0.0.1:1337/ \

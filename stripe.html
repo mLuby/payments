@@ -43,11 +43,11 @@
       </form>
     </li>
     <li><input type=checkbox unchecked disabled>create account for a customer
-      <form enctype='application/json' action="javascript:createAccount();">
-        <input type="text" name="firstname" placeholder="first name">
-        <input type="text" name="lastname" placeholder="last name">
-        <input type="email" name="email" placeholder="email">
-        <label>Date of Birth</label><input type="date" name="dob">
+      <form action="http://127.0.0.1:1337 " method="POST">
+        <input type="text" name="firstname" value="bob">
+        <input type="text" name="lastname" value="jonson">
+        <!-- <input type="email" name="email" placeholder="email"> -->
+        <!-- <label>Date of Birth</label><input type="date" name="dob"> -->
         <input type="submit" value="Create account">
       </form>
     </li>
