@@ -12,3 +12,10 @@ for (var key in myFormData) {
 var xhr = new XMLHttpRequest;
 xhr.open('POST', 'http://127.0.0.1:1337/', true);
 xhr.send(fd);
+
+
+
+localStorage.setItem("username", "marijn");
+console.log(localStorage.getItem("username"));
+// → marijn
+localStorage.removeItem("username");
