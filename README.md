@@ -1,9 +1,39 @@
-Payments
-========
+#Payments as a Service
 
-Different payment solutions:
-- Stripe:
-  [ ] collect payments from credit card
-  [ ] create account for a customer
-  [ ] collect payments for a customer
-  [ ] disburse customer's payments to their bank account
+##Payments Scenarios:
+- Credit Cards
+  - Stripe:
+    - [ ] collect payment
+    - [ ] create account for a merchant
+    - [ ] collect payments for a merchant
+    - [ ] disburse customer's payments to merchant's account
+  - BrainTree
+    - [ ] collect payment
+    - [ ] create account for a merchant
+    - [ ] collect payments for a merchant
+    - [ ] disburse customer's payments to merchant's account
+  - xCustom
+  - xPayPal
+  - xVenmo
+- Proprietary
+  - PayPal
+    - [ ] collect payment
+    - [ ] create account for a merchant
+    - [ ] collect payments for a merchant
+    - [ ] disburse customer's payments to merchant's account
+  - Venmo
+    - [ ] collect payment
+    - [ ] create account for a merchant
+    - [ ] collect payments for a merchant
+    - [ ] disburse customer's payments to merchant's account
+- Crypto
+  - CoinBase
+    - [ ] collect payment
+    - [ ] create account for a merchant
+    - [ ] collect payments for a merchant
+    - [ ] disburse customer's payments to merchant's account
+  - Stellar/Ripple
+    - [ ] collect payment
+    - [ ] create account for a merchant
+    - [ ] collect payments for a merchant
+    - [ ] disburse customer's payments to merchant's account
