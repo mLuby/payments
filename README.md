@@ -1,6 +1,16 @@
 #Payments as a Service
 
 ##Payments Scenarios:
+- save credit card to account
+- associate purchase w account
+- associate additional info with purchase?
+-
+
+
+
+
+
+
 - Credit Cards
   - Stripe:
     - [ ] collect payment
