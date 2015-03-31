@@ -20,8 +20,11 @@
  * 'received' buyer makes a successful payment to us
  * 'frozen' we freeze a payment, perhaps because of suspected fraud
  * 'refunded' we refund a payment to the buyer
- * 'chargeback' buyer chargebacks a payment from us (or should it be 'frozen'?)
+ * ''
+ * 'chargeback won' same thing as 'received'
+ * 'chargeback lost' buyer chargebacks a payment from us (or should it be 'frozen'?)
  * 'disbursed' we disburse a payment to the beneficiary
+ *
  */
 
 /* Atomicity:
