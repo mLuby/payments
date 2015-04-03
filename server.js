@@ -104,26 +104,26 @@ var server = app.listen(4000, function () {
 
 // Seed data:
 var payments = [
-  {beneficiary: 'ann',   currency: 'USD', amount: 10000, status: 'received', modifiers: [
+  {beneficiary: 'ann',   history: [], currency: 'USD', amount: 10000, status: 'received', modifiers: [
     {label: 'transaction fee', amount: -30, percent: -0.029}, {label: 'platform fee', amount: 0, percent: -0.05}]},
-  {beneficiary: 'ann',   currency: 'USD', amount: 10000, status: 'received', modifiers: [
+  {beneficiary: 'ann',   history: [], currency: 'USD', amount: 10000, status: 'received', modifiers: [
     {label: 'transaction fee', amount: -30, percent: -0.029}, {label: 'platform fee', amount: 0, percent: -0.05}]},
-  {beneficiary: 'ann',   currency: 'USD', amount: 10000, status: 'received', modifiers: [
+  {beneficiary: 'ann',   history: [], currency: 'USD', amount: 10000, status: 'received', modifiers: [
     {label: 'transaction fee', amount: -30, percent: -0.029}, {label: 'platform fee', amount: 0, percent: -0.05}]},
-  {beneficiary: 'dan',   currency: 'USD', amount: 10000, status: 'received', modifiers: [
+  {beneficiary: 'dan',   history: [], currency: 'USD', amount: 10000, status: 'received', modifiers: [
     {label: 'transaction fee', amount: -30, percent: -0.029}, {label: 'platform fee', amount: 0, percent: -0.05}]},
-  {beneficiary: 'dan',   currency: 'USD', amount: 10000, status: 'frozen',   modifiers: [
+  {beneficiary: 'dan',   history: [], currency: 'USD', amount: 10000, status: 'frozen',   modifiers: [
     {label: 'transaction fee', amount: -30, percent: -0.029}, {label: 'platform fee', amount: 0, percent: -0.05}]},
-  {beneficiary: 'kat',   currency: 'USD', amount: 10000, status: 'received', modifiers: [
+  {beneficiary: 'kat',   history: [], currency: 'USD', amount: 10000, status: 'received', modifiers: [
     {label: 'transaction fee', amount: -30, percent: -0.029}, {label: 'platform fee', amount: 0, percent: -0.05}]},
-  {beneficiary: 'kat',   currency: 'USD', amount: 10000, status: 'received', modifiers: [
+  {beneficiary: 'kat',   history: [], currency: 'USD', amount: 10000, status: 'received', modifiers: [
     {label: 'transaction fee', amount: -30, percent: -0.029}, {label: 'platform fee', amount: 0, percent: -0.05}]},
-  {beneficiary: 'lea',   currency: 'USD', amount: 10000, status: 'received', modifiers: [
+  {beneficiary: 'lea',   history: [], currency: 'USD', amount: 10000, status: 'received', modifiers: [
     {label: 'transaction fee', amount: -30, percent: -0.029}, {label: 'platform fee', amount: 0, percent: -0.05}]},
-  {beneficiary: 'sam',   currency: 'USD', amount: 10000, status: 'received', modifiers: [
+  {beneficiary: 'sam',   history: [], currency: 'USD', amount: 10000, status: 'received', modifiers: [
     {label: 'transaction fee', amount: -30, percent: -0.029}, {label: 'platform fee', amount: 0, percent: -0.05}]},
-  {beneficiary: 'rob',   currency: 'USD', amount: 10000, status: 'received', modifiers: [
+  {beneficiary: 'rob',   history: [], currency: 'USD', amount: 10000, status: 'received', modifiers: [
     {label: 'transaction fee', amount: -30, percent: -0.029}, {label: 'platform fee', amount: 0, percent: -0.05}]},
-  {beneficiary: 'tom',   currency: 'USD', amount: 10000, status: 'received', modifiers: [
+  {beneficiary: 'tom',   history: [], currency: 'USD', amount: 10000, status: 'received', modifiers: [
     {label: 'transaction fee', amount: -30, percent: -0.029}, {label: 'platform fee', amount: 0, percent: -0.05}, {label: 'discount from sales', amount: 0, percent: +0.02}]},
 ];
