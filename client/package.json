@@ -1,0 +1,19 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "react.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^5.0.8",
+    "flux": "^2.0.1",
+    "immutable": "^3.7.1",
+    "lazy": "^1.0.11",
+    "ramda": "^0.13.0",
+    "react": "^0.13.1"
+  }
+}
