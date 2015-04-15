@@ -1,11 +1,33 @@
 <!doctype html>
 <html>
   <head>
-    <title>Payments</title>
-    <script src="react.js"></script>
+    <title>ImmutableStores</title>
+    <script src="../node_modules/react.js"></script>
+    <script src="../node_modules/flux.js"></script>
+    <script src="../node_modules/immutable.js"></script>
     <script type="text/jsx" src="components/PaymentsApp.js"></script>
   </head>
   <body>
-    <section id="PaymentsApp">Loading</div>
+    <h1>ImmutableStores</h1>
+    <div>
+      <h2>Post items to sell</h2>
+      <form>
+        <label>Name<input type="text" placeholder="Awesome product v1" /></label>
+        <label>Image<input type="image" /></label>
+        <label>Cost<input type="number" placeholder="$100"/></label>
+        <input type="submit">
+      </form>
+    </div>
+    <div>
+      <h2>Buy items</h2>
+      <ul>
+        <li>thing to buy 1<button>Buy</button></li>
+        <li>thing to buy 2<button>Buy</button></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Collect money</h2>
+      <button>Disburse</button><span>$100</span>
+    </div>
   </body
 </html>
